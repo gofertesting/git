@@ -30,3 +30,11 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm64
           tags: ghcr.io/gofertesting/git:latest
+
+      - uses: docker/build-push-action@v7
+        with:
+          context: .
+          file: Dockerfile.stub
+          push: true
+          platforms: linux/amd64,linux/arm64
+          tags: ghcr.io/gofertesting/git:stub
